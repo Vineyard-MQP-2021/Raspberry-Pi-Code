@@ -13,7 +13,7 @@ class PiZMQMessager:
         self.stream_socket.bind("tcp://*:5555")
         self.sound_socket.bind("tcp://*:5556")
         self.connection_socket.bind("tcp://*:5557")
-        self.video = cv2.VideoCapture("rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov")
+        self.video = cv2.VideoCapture("/home/pi/Desktop/sample.avi")
         while True:
             self.saveAudio()
             self.sendConnectionStatus()
@@ -42,3 +42,7 @@ class PiZMQMessager:
 
         
 test = PiZMQMessager()
+
+#source Desktop/MQP/bin/activate
+#sudo netstat -tlp
+#kill -9 pid
