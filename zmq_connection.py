@@ -2,6 +2,7 @@ import socket
 import zmq
 import base64
 import cv2
+import os
 
 class PiZMQMessager:
     
@@ -22,11 +23,14 @@ class PiZMQMessager:
     def saveAudio(self):
         try:
             sound = self.sound_socket.recv(zmq.NOBLOCK)
-            self.sound_socket.send_string("the pi got the file!")
+            url = '/home/pi/Desktop/sounds/mod.wav'
+            self.sound_socket.send_string("the pi got the sound")
             wav = base64.b64decode(sound)
-            file = open("/home/pi/Desktop/test.wav","wb")
+            file = open(url,"wb")
             file.write(wav)
             file.close()
+            os.system('vlc %s vlc://quit &' % url)
+            
         except:
             pass
 
