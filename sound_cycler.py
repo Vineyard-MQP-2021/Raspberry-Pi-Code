@@ -10,7 +10,7 @@ switcher = {
 with open("cycler.txt", "r+") as f:
     num = f.read()
     file = switcher.get(num, None)
-    url = '/home/pi/Desktop/sounds/' + file
+    url = 'sounds/' + file
     os.system('vlc %s vlc://quit &' % url)
     new_num = str(int(num) + 1)
     if new_num == "5":
