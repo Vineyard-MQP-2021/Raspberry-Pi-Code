@@ -45,8 +45,4 @@ class PiZMQMessager:
         self.stream_socket.send(frame)
 
         
-test = PiZMQMessager()
-
-#source Desktop/MQP/bin/activate
-#sudo netstat -tlp
-#kill -9 pid
+messager = PiZMQMessager()
