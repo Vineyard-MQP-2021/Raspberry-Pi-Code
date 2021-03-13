@@ -6,6 +6,6 @@
 
 #### 1. clone the repository
 
-#### note: In order to have the database functionality work, the raspberry pi will need to be able to connect to MongoDB. To do so, use the same 'api_keys.py' file from the app. Put it inside the root repository directory.
+#### note: In order to have the database functionality work, the raspberry pi will need to be able to connect to MongoDB. To do so, use the same 'api_keys.py' file from the app (https://github.com/Vineyard-MQP-2021/VineyardApp). Put it inside the root repository directory.
 
 #### good luck :)
